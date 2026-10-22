@@ -32,9 +32,9 @@ ssh-keygen -t ed25519 -f "$key_path" -N "" -q
 
 echo "
 Host github-$1
- HostName github.com
- User git
- IdentityFile "$key_path" >> "$HOME/.ssh/config"
+    HostName github.com
+    User git
+    IdentityFile $key_path" >> "$HOME/.ssh/config"
 
 echo "https://github.com/new"
 echo "Ваш ключ:"
